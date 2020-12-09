@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "536911b3-4fdb-4eac-a2f0-d61a2cc482bf",
+		"name": "Machine Test ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"vignesh\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"jabssa@m.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/users/register",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jabsa@m.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{url}}/auth/login",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User token listing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVmZDA2YjY0OGUwMjZkMWNiYzkzOGY0NSIsIm5hbWUiOiJ2aWduZXNoIiwicGFzc3dvcmQiOiIkMmEkMTAkaFY3WXZIZDl6d2ZabVIzT04yWXlyZXNpTTU1YUdXMXFUZHI3bXguQ0NzeXhQOWZBNmcvS0ciLCJlbWFpbCI6ImphYnNhQG0uY29tIiwiZGF0ZSI6IjIwMjAtMTItMDlUMDY6MTU6MDAuMTk4WiIsIl9fdiI6MH0sImlhdCI6MTYwNzQ5ODMxNSwiZXhwIjoxNjA3NTAxOTE1fQ.Z-T7A7D_CCMPTsvhGxd9E_czkkIr7_vBFjypfMwOLiA",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{url}}/users/list",
+					"protocol": "http",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"list"
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVmZDA2YjY0OGUwMjZkMWNiYzkzOGY0NSIsIm5hbWUiOiJ2aWduZXNoIiwicGFzc3dvcmQiOiIkMmEkMTAkaFY3WXZIZDl6d2ZabVIzT04yWXlyZXNpTTU1YUdXMXFUZHI3bXguQ0NzeXhQOWZBNmcvS0ciLCJlbWFpbCI6ImphYnNhQG0uY29tIiwiZGF0ZSI6IjIwMjAtMTItMDlUMDY6MTU6MDAuMTk4WiIsIl9fdiI6MH0sImlhdCI6MTYwNzQ5ODMxNSwiZXhwIjoxNjA3NTAxOTE1fQ.Z-T7A7D_CCMPTsvhGxd9E_czkkIr7_vBFjypfMwOLiA",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
